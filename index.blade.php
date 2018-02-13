@@ -1,26 +1,16 @@
 @extends("layouts.app")
 
 @section("content")
-<h1>posts</h1>
-
-    @if (count($posts)>0) 
-        @foreach ($posts as $post)
-            <div class ="well">
-                <h3><a href="/posts/{{$post->id}}"> {{$post->koteret}} </a></h3>
-                  <small>   
-                      written on {{$post->created_at}}
-                      by{{$post->user->name}}
-                  </small>
-            </div>
-            
-        @endforeach
-           {{$posts->links()}}
-    @else
-         <p>no records found </p>
-
-    @endif
-
-        
+<div class="jumbotron text-center">
+  <h1>Doro Doron Eitan</h1>
+  <p>www.doro.bandcamp.com</p>
+  <p>ברוכים הבאים לאתר הראשון שלי בלרבל</p>
+  <p><a class="btn btn-primary btn-lg" 
+    href="/login" role="button">Login</a>
+    <a class="btn btn-success btn-lg" 
+    href="/register" role="button">Register</a>
+  </p>
+</div>
 @endsection
 
 
